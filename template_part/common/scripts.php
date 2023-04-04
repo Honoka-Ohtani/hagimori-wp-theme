@@ -1,8 +1,19 @@
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0-alpha/quicklink.umd.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/assets/js/common.js?v=<?php echo filemtime(__DIR__.'/../../assets/js/common.js'); ?>"></script>
-	<script src="/api/sendmail.js" async></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magic-grid/3.2.4/magic-grid.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<!-- Swiper CDN読み込み -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/project.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/about.js"></script>

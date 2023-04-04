@@ -1,5 +1,0 @@
-@each $k, $v in $font-sizes {
-  .text-#{$k} {
-    font-size: $v;
-  }
-}

@@ -1,0 +1,131 @@
+.button1 {
+  display: block;
+  position: relative;
+  width: 240px;
+  height: 60px;
+  background: rgb(153, 162, 191);
+  background: radial-gradient(#cbdfe9 0%, rgba(95, 162, 158, 0) 90%);
+  box-shadow: 0 0 30px rgb(220 237 243);
+  transition: all 0.7s ease-in;
+}
+.button1::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -4px;
+  left: 0;
+  width: 160px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(170, 255, 240);
+  background: rgba(255, 255, 255, 0);
+}
+.button1::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -4px;
+  right: 0;
+  width: 160px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(170, 255, 240);
+  background: rgba(255, 255, 255, 0);
+}
+
+.button1__wrapper {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(
+    0% 0%,
+    0 100%,
+    0.7% 100%,
+    0.7% 3%,
+    99.3% 3%,
+    99.3% 98%,
+    0% 98%,
+    0% 100%,
+    100% 100%,
+    100% 0%
+  );
+  background-color: hsla(0, 0%, 100%, 1);
+  background-color: #75a0bb;
+  transition: 0.7s;
+}
+
+.button1__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  left: 0.8%;
+  width: 98.4%;
+  height: 94%;
+  color: rgba(17, 74, 139, 0.7);
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  transition: all 0.3s ease-in;
+}
+.button1__box:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.button1__box::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  clip-path: path(
+    "M215.98,12.57c8.09,0,16.1,.12,24.02,.33V0H0V44.89C53.01,25.06,130.12,12.57,215.98,12.57Z"
+  );
+}
+.contact-btn::before {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.button1__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  /*色や形状*/
+  background: #333;
+  width: 120%;
+  height: 100%;
+  transform: skewX(-25deg);
+}
+
+.button1__wrapper {
+  position: relative;
+  z-index: 3; 
+}
+
+/*hoverした時のアニメーション*/
+.button1__wrapper:hover::before {
+  animation: skewanime 0.3s forwards; 
+}
+
+@keyframes skewanime {
+  100% {
+    left: -10%; 
+  }
+}
