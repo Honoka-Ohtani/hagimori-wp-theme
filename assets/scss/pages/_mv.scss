@@ -25,10 +25,19 @@
   width:100%; 
   aspect-ratio: 16/9;
   padding-bottom:2rem;
+  position:relative;
 }
 .mv-item iframe {
   width:100%;
   height:100%;
+}
+.youtube-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 150px;
+  height: 100px;
 }
 .mv-title{
   text-align:left;

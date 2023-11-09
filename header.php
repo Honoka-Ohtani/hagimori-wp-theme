@@ -15,7 +15,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body oncontextmenu="return false;"  class="<?php is_page('about') ? 'bg-main-image bg-main-image_sp' : ''; ?>">
+<body class="<?php is_page('about') ? 'bg-main-image bg-main-image_sp' : ''; ?>">
     <?php if(!is_front_page()): ?>
     <div id="cursor" class="cursor"></div>
     <header class="header" role="banner">
