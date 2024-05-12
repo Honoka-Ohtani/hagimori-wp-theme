@@ -1,0 +1,246 @@
+.openbtn {
+  position: fixed;
+  z-index: 9999;
+  /*ボタンを最前面に*/
+  top: 20px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(25px);
+}
+
+/*ボタン内側*/
+
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 13px;
+  height: 1px;
+  background-color: #124a8b;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 27px;
+  width: 55%;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 34px;
+  width: 30%;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.active {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 24px;
+  left: 13px;
+  transform: translateY(6px) rotate(-35deg);
+  width: 50%;
+  background-color: #fff;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  top: 36px;
+  left: 13px;
+  transform: translateY(-6px) rotate(35deg);
+  width: 50%;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .openbtn {
+    top: 1px;
+    right: 0px;
+  }
+  .openbtn span {
+    height: 0.5px;
+  }
+  .openbtn span:nth-of-type(1) {
+    width: 45%;
+  }
+  .openbtn span:nth-of-type(2) {
+    top: 34px;
+    width: 25%;
+  }
+}
+
+#g-nav {
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  background: rgba(172, 187, 206, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  visibility: hidden;
+}
+
+#g-nav.panelactive {
+  opacity: 1;
+  z-index: 999;
+  visibility: initial;
+}
+
+#g-nav.panelactive #g-nav-list__wrap {
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 16vh;
+  margin-bottom: 10vh;
+}
+
+.menu-top__link {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+}
+
+.g-nav-list {
+  z-index: 999;
+}
+
+#g-nav.panelactive .g-nav-list {
+  font-family: cinzel;
+  padding-top: 15vh;
+}
+
+.g-nav-list__link {
+  color: #fff;
+  text-decoration: none;
+  padding: 2rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: cinzel;
+  font-weight: bold;
+}
+
+.g-nav-list__item {
+  list-style: none;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+#g-nav .blurTrigger a {
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+/* nav-menu */
+
+.g-nav-list__item:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.g-nav-list__item:nth-of-type(3) {
+  animation-delay: 0.25s;
+}
+
+.g-nav-list__item:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.g-nav-list__item:nth-of-type(5) {
+  animation-delay: 0.55s;
+}
+
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.blurTrigger {
+  opacity: 0;
+}
+
+.project-item {
+  font-family: cinzel;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.g-nav-list__link {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: none;
+  font-weight: normal;
+}
+@media screen and (max-width: 768px) {
+  .g-nav-list__link {
+    font-size: 1.6rem;
+  }
+}
+
+.sns-icons__wrap {
+  bottom: 5vh;
+}
+
+.sns-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sns-icons__item {
+  padding: 0 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-top__link {
+    color: #fff;
+    font-size: 2rem;
+  }
+  #g-nav.panelactive .g-nav-list {
+    font-family: cinzel;
+    padding-top: 10vh;
+  }
+  #g-nav.panelactive #g-nav-list__wrap {
+    margin-top: 18vh;
+  }
+  #g-nav-list__wrap {
+    margin-bottom: 16rem;
+  }
+  #g-nav .blurTrigger a {
+    letter-spacing: 0.2em;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .project::after {
+    top: 0;
+  }
+  .sns-icons__item {
+    padding: 0 2rem;
+    width: 60px;
+  }
+  .sns-icons__wrap {
+    bottom: 15vh;
+  }
+  .sns-icon {
+    width: 50px;
+  }
+}

@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 10rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+
+.page-title {
+  padding: 4rem 0;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  font-family: Cinzel;
+}
+@media screen and (max-width: 768px) {
+  .sp {
+    display: block;
+  }
+  .header {
+    height: 6rem;
+  }
+
+  .page-title {
+    padding: 2rem 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.3em;
+  }
+  .sidebar {
+    height: 100svh;
+  }
+  .main-content {
+    height: 100svh;
+  }
+}

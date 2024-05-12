@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+.section-top {
+    position: relative;
+}
+
+.name {
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+    max-width: 375px;
+}
+
+ .jia {
+    position: absolute;
+    bottom: 6%;
+    left: 3%;
+    font-size: 9rem;
+    font-weight: 300;
+    color: rgba(7, 67, 121, 0); 
+    letter-spacing: 0.05em;
+    text-shadow: 30px 5px 10px rgba(7, 67, 121, .4);
+}
+
+.en-name {
+    position: absolute;
+    bottom: 5%;
+    left: 36%;
+    color: #fff;
+    font-size: 3.5rem;
+    letter-spacing: 0.05em;
+    text-shadow: -1px 15px 10px rgba(7, 67, 121, 0.5);
+}
+
+.introduction {
+    margin-top: 100vh;
+    background-color:rgba(255,255,255,0.7);   
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);   
+}
+
+.introduction-wrapper {
+    padding: 5rem 0;
+}
+
+.introduction-description {
+    line-height: 3;
+    margin-top: 100px ;
+}
+
+
+.transparent-heading {
+  font-size:6.5rem;
+  /* position:absolute; */
+  /* left:4%; */
+  background-size: cover; 
+ background-position: center; 
+background-repeat: repeat; 
+     background-image: url('../img/about-top.jpg'); 
+     -webkit-background-clip: text;
+    color: rgba(0,0,0,0)
+}
+
+
+
+.bg-main-image::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 30% 100%;
+    background-image: url("../img/about-top.jpg"); 
+    background-size: cover;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .name {
+        max-width: 50%;
+        margin-bottom: 6rem; 
+    }
+    .en-name {
+        left: 6%;
+        bottom: 4%;
+        text-shadow: -10px 10px 5px rgba(7, 67, 121, .2);
+    }  
+    .jia {
+        text-shadow: -10px -45px 10px rgba(7, 67, 121, .2);
+    }
+}
+@media screen and (max-width: 750px) {
+    .name {
+        max-width: 70%;
+        margin-bottom: 3rem; 
+    }
+
+ .en-name {
+        font-size: 2rem;
+        left: 7%;
+        bottom: 3%;
+        text-shadow: -10px 10px 5px rgba(7, 67, 121, 0);
+    }
+    .jia {
+        font-size: 5rem;
+        text-shadow: 35px -20px 7px rgba(7, 67, 121,0);
+    } 
+    .introduction {
+        margin-top: 100vh;
+    }
+
+    .introduction-wrapper {
+        padding: 4rem 3rem;
+    }
+
+    .introduction-description {
+        font-size: 1.4rem;
+        line-height: 2.5;
+        text-align: left;
+        margin: 5rem 0;
+    }
+    .transparent-heading{
+        font-size:4rem;
+        top:10%;
+    }
+}
+
+
+
+.l-hero {
+    overflow: hidden;
+    position: relative;
+    margin-left: 3rem;
+    padding-bottom: 10rem;
+}
+
+.l-hero-wrapper {
+    width: 120%;
+    height: 35vh;
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: auto;
+}
+
+.pic {
+    height: 45vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top:15rem;
+}
+
+.text-wrap {
+    text-align: left;
+    margin-top:1rem;
+}
+.work-detail{
+  display:flex;
+}
+.category{
+  margin-left:5rem;
+}
+.works__title{
+  margin-top:2rem;
+}
+
+ .archivement{
+    padding-top:5rem;
+  opacity:1;
+} 
+
+
+/* 共通 */
+.section {
+    width: 100%;
+    /* padding: 100px 0; */
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+
+
+/* 普通のセクション */
+.normal-text {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    margin-top: 60px;
+}
+
+
+.side-scroll-list-wrapper {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.side-scroll-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    gap: 0 60px;
+}
+
+
+
+.archive-item {
+    max-width: 768px;
+    width: 100%;
+    margin:0 auto 2rem auto;
+}
+.archive-list{
+  padding:30px; 
+}
+.archive-item__dt {
+    min-width: 200px;
+    text-align: left;
+    margin-right: 1.5rem;
+}
+
+.archive-item__dd {
+    width: 100%;
+    text-align:left;
+    text-indent: .6em;;
+    margin-left:1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .archive-list{
+        font-size:1.4rem;
+    }
+}

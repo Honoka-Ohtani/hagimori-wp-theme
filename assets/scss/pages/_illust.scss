@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+
+ .works {
+  margin:12rem 0;
+}
+
+.text-wrap{
+  text-align: left;
+  margin:1rem 0 ;
+}
+.works__title{
+  font-size:1.6rem;
+}
+
+.works-item {
+  width: 20%;
+  margin-bottom:5rem;
+  word-break: break-all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works__date{
+  padding-top:1rem;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1080px){
+  .works-item {
+    width: 35%;
+}
+}
+@media screen and (max-width: 768px){
+  .works-item {
+    width: 50%;
+    margin-bottom:0;
+}
+}
+
+
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width:100vw;
+  text-align: center;
+}
+
+.modal-button {
+    /* color: #4f96f6;
+    background-color: #eeeeee;
+    font-weight: bold;
+    text-align: center; */
+    cursor :pointer;
+    transition: all 0.3s;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 1px;
+    padding: 12px 2px;
+    max-width:300px;
+    text-decoration: none;
+}
+
+.modal-button:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);/*下に動く*/
+
+}
+
+
+
+/*ラベルホバー時*/
+.modal-button:hover {
+  color: #000;
+  transition: .6s;
+}
+.modal-title{
+  color:#fff;
+  text-align:center;
+  margin-top:4rem;
+}
+
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -.05em;
+  vertical-align: middle;
+  content: ""
+}
+
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 2px;
+  vertical-align: middle
+}
+
+.modal-wrapper .modal-window .modal-content {
+  overflow-y: auto;
+  text-align: left;
+  height:100svh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:4rem;
+}
+
+.modal_title {
+  font-size: 1.5em;
+	position: relative;
+	overflow: hidden;
+  padding: 0;
+}
+
+.modal_title::before,
+.modal_title::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+}
+
+/* h2 プライマリカラー*/
+.modal_title:before{
+	border-bottom: 4px solid #6bb6ff;
+	width: 100%;
+}
+/* h2 セカンダリカラー*/
+.modal_title:after{
+	border-bottom: 4px solid #c8e4ff;
+	width: 100%;
+}
+
+
+.modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8)
+}
+
+ .modal-close {
+  z-index: 20;
+  position: absolute;
+  top: 3%;
+  right: -3%;
+  padding:3rem;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0
+} 
+.modal-close::before, .modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.5px;
+  height: 30px; 
+  background: #fff; 
+}
+ 
+.modal-close::before {
+  transform: translate(-50%,-50%) rotate(50deg);
+}
+ 
+.modal-close::after {
+  transform: translate(-50%,-50%) rotate(-50deg);
+}
+
+
+.modal-wrapper .modal-close:hover {
+  transition: opacity .2s, visibility .4s;
+}
+
+.modal-overlay:hover{
+  opacity:initial
+}
+
+.property-detail-image{
+  max-height:600px;
+  margin:auto;
+}
+
+.arrow {
+  /* position: relative; */
+  display: inline-block;
+  padding: 10px;
+}
+
+.arrow::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  position: absolute;
+  top:46%;
+  transform: translate(0,-50%);
+  z-index:100;
+}
+.arrow-right::before {
+  transform: rotate(45deg);
+  right:2rem;
+}
+
+.arrow-left::before {
+  transform: rotate(-135deg);
+  left:2rem;
+}
+
+@media screen and (max-width: 1224px){
+  .modal-close {
+    top:15%;
+    right: 5%;
+  } 
+}
+
+ @media screen and (max-width: 768px){
+  .arrow::before {
+    top:36%;
+  }
+.modal-button{
+  margin-top:0;
+  padding:0;
+}
+.modal-close {
+  top: 15%;
+  right: 5%;
+} 
+.modal-close::before, .modal-close::after {
+  height: 20px; 
+}
+}

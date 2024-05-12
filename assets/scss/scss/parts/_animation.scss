@@ -1,0 +1,16 @@
+
+
+.container {
+  animation: 1.2s ease-in fadeInAnime;
+}
+
+
+@keyframes fadeInAnime {
+  0% {
+    backdrop-filter: blur(30px);
+  }
+
+  100% {
+    backdrop-filter: blur(0);
+  }
+}

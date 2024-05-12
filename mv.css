@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.music-video{
+  margin:12rem 10rem 20rem;
+}
+.mv-list-wrapper{
+  display:flex;
+  max-width:1080px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin:0 auto;
+}
+.mv-list {
+  width: 50%;
+  margin-bottom:8rem;
+  padding:0 3rem; 
+}
+/* .mv-list:nth-child(2n+1){
+  padding-right:0;
+}
+.mv-list:nth-child(2n){
+  padding-left:0;
+} */
+.mv-item{
+  width:100%; 
+  aspect-ratio: 16/9;
+  padding-bottom:2rem;
+}
+.mv-item iframe {
+  width:100%;
+  height:100%;
+}
+.mv-title{
+  text-align:left;
+}
+@media screen and (max-width: 768px) {
+  .music-video{
+    margin: 0 ;
+  }
+  .mv-list {
+    width:100%;
+    padding:5rem 0;
+    padding-bottom:2rem;
+    margin-bottom:0;
+  }
+ .mv-title{
+  margin-left:1rem;
+ }
+}

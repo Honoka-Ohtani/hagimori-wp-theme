@@ -1,0 +1,112 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Shippori+Mincho+B1:wght@400;500&display=swap");
+
+/* CSS Document */
+html {
+  font-size: 62.5%;
+  /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  color: #124a8b;
+  /* RGB */
+  font-family: "Cinzel", serif;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 400;
+  font-size: 1.6em;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.4rem;
+}
+a {
+  transition: all 0.2s ease-in;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.none {
+  display: none;
+}
+.sp {
+  display: none;
+}
+/* html,body,a{
+  cursor: none;
+} */
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 1.5px #75a0bb;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 100000;
+  transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+  transform: translate(0, 0);
+  pointer-events: none;
+}
+
+/*aタグにホバーした時に見た目変化*/
+.cursor.cursor--hover {
+  top: -20px;
+  left: -20px;
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 1200px) {
+  .cursor {
+    display: none;
+  }
+}
+.thanks-title.clicked{
+  opacity:0.1;
+}
+.bg-main-image.clicked:before {
+  filter: blur(20px);
+}
+
+.mainblur {
+  filter: blur(20px);
+}
+.hero-filter {
+  animation: 1.2s ease-in fadeInAnime;
+}
+
+.lazyload {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+@import "reset";
+
+@import "pages/top";
+@import "pages/about";
+@import "pages/illust";
+@import "pages/mv";
+@import "pages/contact";
+@import "pages/confirmation";
+@import "pages/thanks";
+@import "pages/project";
+
+
+@import "parts/animation";
+@import "parts/button";
+@import "parts/footer";
+@import "parts/global-nav";
+@import "parts/header";
+
+
